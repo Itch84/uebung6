@@ -15,10 +15,10 @@ ActiveRecord::Schema.define(version: 20131119120752) do
 
   create_table "accounts", force: true do |t|
     t.integer  "number"
+    t.integer  "customer_id"
     t.decimal  "balance",     default: 0.0
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "customer_id"
   end
 
   create_table "customers", force: true do |t|

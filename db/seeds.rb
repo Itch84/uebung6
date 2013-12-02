@@ -9,23 +9,9 @@
 # ruby encoding: utf-8
 
 
-Customer.create(last_name: "Ide", first_name: "Itch2", address: "Britzer Damm 59")
+Customer.create(first_name: "Itch", last_name: "Ide", address: "Britz").accounts.create(number: 001, balance: 500.00)
+Customer.create(first_name: "J", last_name: "B", address: "SchubsdieKuh").accounts.create(number: 002, balance: 1200.00)
+Customer.create(first_name: "Mama", last_name: "Afrika", address: "Golden Pavement").accounts.create(number: 003, balance: 80000000.00)
+Customer.create(first_name: "Rumpelstilzchen", last_name: "Bilge", address: "Outta Berlin").accounts.create(number: 004, balance: 400.00)
 
-
-Book.create(:title => 'Homo faber').authors.create(:first_name => 'Max', :last_name => 'Frisch')
-Book.create(:title => 'Der Besuch der alten Dame').authors.create(:first_name => 'Friedrich', :last_name => 'Dürrenmatt')
-Book.create(:title => 'Julius Shulman: The Last Decade').authors.create([
-  {:first_name => 'Thomas', :last_name => 'Schirmbock'},
-  {:first_name => 'Julius', :last_name => 'Shulman'},
-  {:first_name => 'Jürgen', :last_name => 'Nogai'}
-  ])
-Book.create(:title => 'Julius Shulman: Palm Springs').authors.create([
-  {:first_name => 'Michael', :last_name => 'Stern'},
-  {:first_name => 'Alan', :last_name => 'Hess'}
-  ])
-Book.create(:title => 'Photographing Architecture and Interiors').authors.create([
-  {:first_name => 'Julius', :last_name => 'Shulman'},
-  {:first_name => 'Richard', :last_name => 'Neutra'}
-  ])
-Book.create(:title => 'Der Zauberberg').authors.create(:first_name => 'Thomas', :last_name => 'Mann')
-Book.create(:title => 'In einer Familie').authors.create(:first_name => 'Heinrich', :last_name => 'Mann')
+Transaction.create(:amount => 100.00, :description => "Bitte tu mir nichts", :balance_after_transaction => 333.00, :account_id => 1)
